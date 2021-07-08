@@ -1,12 +1,12 @@
 import React from "react";
-import { Title } from "../../styles/CommonStyle";
+import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import { IoMdSchool, IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import styled from "styled-components";
 
 function Growth() {
   return (
-    <section>
+    <SectionWrapper color="#F9F9FF">
       <Title width={150}>SERVICES</Title>
 
       <Container>
@@ -57,20 +57,17 @@ function Growth() {
           </Content>
         </Item>
       </Container>
-    </section>
+    </SectionWrapper>
   );
 }
 
 const Container = styled.div`
-  height: calc(100vh - 55px);
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
 const Item = styled.div`
-  height: auto;
   background-color: #fff;
   padding: 30px 20px;
   margin: 20px;

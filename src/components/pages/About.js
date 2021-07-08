@@ -1,18 +1,18 @@
 import React from "react";
 import ImageSlider from "../common/ImageSlider";
 import styled from "styled-components";
-import { Title } from "../../styles/CommonStyle";
+import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import { BsCalendar, BsEnvelope } from "react-icons/bs";
 import { BiPhoneCall } from "react-icons/bi";
 import { imageSrc } from "../../img/Images";
 
 function About() {
   return (
-    <>
+    <SectionWrapper color="#EAEAEA">
       <ImageSlider images={imageSrc.myinfo} paddingTop auto />
       <AboutArea>
         <Title width={120}>ABOUT</Title>
-        <Info>
+        <InfoWrapper>
           <MyIntro>
             안녕하세요. 끊임없는 성장을 추구하는 열정있는 개발자입니다. React로
             웹페이지 만드는게 재밌어요 ! 궁금하신 점이 있으시다면 언제든지
@@ -29,36 +29,36 @@ function About() {
               <BsEnvelope /> smile_daeun@naver.com
             </li>
           </MyContact>
-        </Info>
+        </InfoWrapper>
       </AboutArea>
-    </>
+    </SectionWrapper>
   );
 }
 
 const AboutArea = styled.section`
-  height: auto;
   position: relative;
 `;
 
-const Info = styled.div`
+const InfoWrapper = styled.div`
   display: block;
   font-size: 1rem;
 
   @media (min-width: 992px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 20px 0;
   }
 `;
 
 const MyIntro = styled.div`
-  width: 50%;
   padding: 20px;
   letter-spacing: 1.5px;
 `;
 
 const MyContact = styled.ul`
-  width: 50%;
+  padding: 20px;
+  box-sizing: bord;
   li {
     height: 40px;
     display: flex;

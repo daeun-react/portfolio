@@ -16,3 +16,16 @@ export const Title = styled.div`
     background-image: linear-gradient(to right, royalblue, aquamarine);
   }
 `;
+
+export const SectionWrapper = styled.section`
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: auto;
+  background-color: ${({ color }) => color || "#fff"};
+
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
+`;

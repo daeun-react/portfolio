@@ -8,10 +8,10 @@ import EndPage from "./pages/EndPage";
 const Layout = ({ page }, ref) => {
   return (
     <ContentStyle ref={ref} page={page}>
-      {page === "0" && <About />}
-      {page === "1" && <Growth />}
-      {page === "2" && <Portfolio />}
-      {page === "3" && <EndPage />}
+      <About />
+      <Growth />
+      <Portfolio />
+      <EndPage />
     </ContentStyle>
   );
 };

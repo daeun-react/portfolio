@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
 import list from "./Protfolio/list";
-import { Title } from "../../styles/CommonStyle";
+import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import Blackout from "../common/Blackout";
 import Modal from "../common/Modal";
 import PortfolioItem from "./Protfolio/PortfolioItem";
@@ -53,7 +53,7 @@ function Portfolio() {
   }, []);
 
   return (
-    <PortfolioSection>
+    <SectionWrapper color="#EAEAEA">
       <Title width={180}>PORTFOLIO</Title>
       <UL>
         {category.map((c, i) => (
@@ -79,23 +79,23 @@ function Portfolio() {
       <Pagenation>{renderButton}</Pagenation>
       <Blackout isVisible={isVisible} onSetIsVisible={setIsVisible} />
       {showItem && <Modal isVisible={isVisible} listItem={showItem} />}
-    </PortfolioSection>
+    </SectionWrapper>
   );
 }
 
-const PortfolioSection = styled.section`
-  position: relative;
-`;
-
 const UL = styled.ul`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 120px);
+  margin: 10px 60px;
 `;
 
 const LI = styled.li`
-  display: inline-block;
   font-weight: bold;
-  padding: 0 20px;
-  font-size: 16px;
+  padding: 0 10px;
+  font-size: 1.15rem;
+  min-width: 100px;
+  text-align: center;
   cursor: pointer;
   color: ${(props) => (props.active ? `royalblue` : `#000`)};
 
@@ -105,8 +105,8 @@ const LI = styled.li`
 `;
 
 const Pagenation = styled.div`
-  margin: 10px auto;
   text-align: center;
+  padding: 20px;
 `;
 
 const Page = styled.button`

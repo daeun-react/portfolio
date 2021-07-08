@@ -29,6 +29,10 @@ function Chart() {
 
 const ChartWrapper = styled.div`
   margin-top: 40px;
-  width: 40%;
+  width: 60%;
+
+  @media (min-width: 992px) {
+    width: 40%;
+  }
 `;
 export default Chart;
