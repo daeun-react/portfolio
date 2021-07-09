@@ -7,7 +7,7 @@ function PortfolioItem({ listItem, showModal, show, type = "page" }) {
   return (
     <FilterItem show={show} type={type}>
       <ImageWrapper>
-        <ImageSlider images={listItem.images} />
+        <ImageSlider images={listItem.images} auto={false} />
         {type === "page" && (
           <ModalWrapper onClick={() => showModal(listItem)}>
             <BsArrowsFullscreen />
@@ -24,7 +24,7 @@ function PortfolioItem({ listItem, showModal, show, type = "page" }) {
         {listItem.category === "project" && (
           <div className="warning">
             7/4일 이후 회사 보안문제로 웹 접속을 차단한 프로젝트가 있습니다.
-            <br />웹 사이트는 이미지로 대체하며, 계정 정보 필요시 따로 연락
+            <br />웹 사이트는 이미지로 대체하며, 계정정보 필요시 연락
             부탁드립니다.
           </div>
         )}
@@ -72,6 +72,10 @@ const ModalWrapper = styled.div`
     &:hover {
       color: #ff6384;
     }
+  }
+
+  @media (max-width: 552px) {
+    display: none;
   }
 `;
 

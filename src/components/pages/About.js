@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import ImageSlider from "../common/ImageSlider";
 import styled from "styled-components";
 import { SectionWrapper, Title } from "../../styles/CommonStyle";
@@ -6,10 +6,10 @@ import { BsCalendar, BsEnvelope } from "react-icons/bs";
 import { BiPhoneCall } from "react-icons/bi";
 import { imageSrc } from "../../img/Images";
 
-function About() {
+function About({}, ref) {
   return (
-    <SectionWrapper color="#EAEAEA">
-      <ImageSlider images={imageSrc.myinfo} paddingTop auto />
+    <SectionWrapper color="#EAEAEA" ref={ref}>
+      <ImageSlider images={imageSrc.myinfo} auto />
       <AboutArea>
         <Title width={120}>ABOUT</Title>
         <InfoWrapper>
@@ -71,4 +71,4 @@ const MyContact = styled.ul`
   }
 `;
 
-export default About;
+export default forwardRef(About);

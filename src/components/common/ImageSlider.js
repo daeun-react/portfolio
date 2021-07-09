@@ -1,32 +1,28 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import styled, { css } from "styled-components";
+import useInterval from "./useInterval";
 
-function ImageSlider({ images, paddingTop, auto = false }) {
+function ImageSlider({ images, auto = false }) {
   const totalItems = images.length;
   const [current, setCurrent] = useState(0);
-  const isMoving = useRef(false);
 
   const moveNext = useCallback(() => {
-    if (!isMoving.current) {
-      if (current === totalItems - 1) {
-        setCurrent(0);
-      } else {
-        setCurrent(current + 1);
-      }
+    if (current === totalItems - 1) {
+      setCurrent(0);
+    } else {
+      setCurrent(current + 1);
     }
   }, [current, totalItems]);
 
   const movePrev = () => {
-    if (!isMoving.current) {
-      if (current === 0) {
-        setCurrent(totalItems - 1);
-      } else {
-        setCurrent(current - 1);
-      }
+    if (current === 0) {
+      setCurrent(totalItems - 1);
+    } else {
+      setCurrent(current - 1);
     }
   };
 
-  const ItemList = images?.map((img, index) => {
+  const reanderItemList = images?.map((img, index) => {
     const prev = current === 0 ? totalItems - 1 : current - 1;
     const next = current === totalItems - 1 ? 0 : current + 1;
 
@@ -36,35 +32,21 @@ function ImageSlider({ images, paddingTop, auto = false }) {
         active={index === current}
         prev={index === prev}
         next={index === next}
+        auto={auto}
       >
         <img src={img} alt="" />
       </ImageSlide>
     );
   });
 
-  useEffect(() => {
-    isMoving.current = true;
-    setTimeout(() => {
-      isMoving.current = false;
-    }, 500);
-  }, [current]);
-
-  useEffect(() => {
-    if (!auto) return;
-
-    const timer = setTimeout(() => {
-      moveNext();
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [moveNext, auto]);
+  // useInterval(moveNext, 3000);
 
   if (!images) return null;
 
   return (
-    <ImageSliderStyle paddingTop={paddingTop}>
+    <ImageSliderStyle auto={auto}>
       <Container>
-        {ItemList}
+        {reanderItemList}
         <PrevButton onClick={movePrev}>&#10094;</PrevButton>
         <NextButton onClick={moveNext}>&#10095;</NextButton>
       </Container>
@@ -75,6 +57,7 @@ function ImageSlider({ images, paddingTop, auto = false }) {
 const ImageSlide = styled.div`
   display: none;
   transform: all 1s ease-in;
+  ${({ auto }) => (auto ? `height: auto` : `height: 100%`)};
   ${({ active }) =>
     active &&
     css`
@@ -83,8 +66,15 @@ const ImageSlide = styled.div`
 `;
 
 const ImageSliderStyle = styled.div`
-  height: auto;
-  ${({ paddingTop }) => paddingTop && `padding-top: 70px;`}
+  ${({ auto }) =>
+    auto
+      ? css`
+          height: auto;
+          padding-top: 70px;
+        `
+      : css`
+          height: 100%;
+        `};
 `;
 
 const Container = styled.div`

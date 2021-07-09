@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import { IoMdSchool, IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import styled from "styled-components";
 
-function Growth() {
+function Growth({}, ref) {
   return (
-    <SectionWrapper color="#F9F9FF">
+    <SectionWrapper color="#F9F9FF" ref={ref}>
       <Title width={150}>SERVICES</Title>
 
       <Container>
@@ -69,7 +69,7 @@ const Container = styled.div`
 
 const Item = styled.div`
   background-color: #fff;
-  padding: 30px 20px;
+  padding: 20px;
   margin: 20px;
   text-align: left;
   transition: all 0.5s ease;
@@ -104,4 +104,4 @@ const Content = styled.div`
   padding: 10px 0;
 `;
 
-export default Growth;
+export default forwardRef(Growth);

@@ -28,7 +28,7 @@ function Chart() {
 }
 
 const ChartWrapper = styled.div`
-  margin-top: 40px;
+  margin: 40px 0;
   width: 60%;
 
   @media (min-width: 992px) {

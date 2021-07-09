@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import Chart from "../common/Chart";
 
-function EndPage() {
+function EndPage({}, ref) {
   return (
-    <SectionWrapper color="#F9F9FF">
+    <SectionWrapper color="#F9F9FF" ref={ref}>
       <div
         style={{
           display: "flex",
@@ -24,4 +24,4 @@ function EndPage() {
   );
 }
 
-export default EndPage;
+export default forwardRef(EndPage);

@@ -3,7 +3,7 @@ import ProgressBar from "./ProgressBar";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-function Header({ pageInfo, viewIndex, moveToPage }) {
+function Header({ pageInfo, moveToPage }) {
   const [show, setShow] = useState(false);
   const toggleClick = () => {
     setShow((show) => setShow(!show));
@@ -24,7 +24,7 @@ function Header({ pageInfo, viewIndex, moveToPage }) {
           ))}
         </NavbarMenu>
       </Navbar>
-      <ProgressBar viewIndex={viewIndex} />
+      <ProgressBar />
     </HeaderStyle>
   );
 }

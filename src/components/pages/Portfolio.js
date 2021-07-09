@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
 import list from "./Protfolio/list";
@@ -7,7 +7,7 @@ import Blackout from "../common/Blackout";
 import Modal from "../common/Modal";
 import PortfolioItem from "./Protfolio/PortfolioItem";
 
-function Portfolio() {
+function Portfolio({}, ref) {
   const category = ["ALL", "PROJECT", "REACT"];
   const [active, setActive] = useState("ALL");
   const [buttonActive, setButtonActive] = useState(1);
@@ -53,7 +53,7 @@ function Portfolio() {
   }, []);
 
   return (
-    <SectionWrapper color="#EAEAEA">
+    <SectionWrapper color="#EAEAEA" ref={ref}>
       <Title width={180}>PORTFOLIO</Title>
       <UL>
         {category.map((c, i) => (
@@ -87,7 +87,7 @@ const UL = styled.ul`
   display: flex;
   justify-content: center;
   width: calc(100% - 120px);
-  margin: 10px 60px;
+  margin: 40px 60px;
 `;
 
 const LI = styled.li`
@@ -126,4 +126,4 @@ const Page = styled.button`
       background: aquamarine;
     `}
 `;
-export default Portfolio;
+export default forwardRef(Portfolio);
