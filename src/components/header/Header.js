@@ -18,7 +18,13 @@ function Header({ pageInfo, moveToPage }) {
         </NavbarToggler>
         <NavbarMenu show={show}>
           {Object.keys(pageInfo).map((page, i) => (
-            <NavItem key={`page${i}`} onClick={() => moveToPage(i)}>
+            <NavItem
+              key={`page${i}`}
+              onClick={() => {
+                moveToPage(i);
+                toggleClick();
+              }}
+            >
               <NavLink>{pageInfo[i]}</NavLink>
             </NavItem>
           ))}

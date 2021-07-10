@@ -49,11 +49,30 @@ const list = [
   {
     id: 6,
     category: "react",
-    title: "react",
-    desc: "",
-    language: "",
-    link: "",
-    images: imageSrc.pj1,
+    title: "Themoviedb API를 이용한 영화검색 사이트",
+    desc: [
+      "https://api.themoviedb.org API 이용",
+      "영화 순위 정보 제공(Now Playing, Upcoming Movies, Popular Movies)",
+      "TV 프로그램 순위 정보 제공(Top Rated Shows, Popular Shows, Airing Today)",
+      "영화 및 TV 프로그램 검색 기능 제공",
+    ],
+    language: "React, Axios, react-helmet, styled-components",
+    link: "https://daeun-react.github.io/moviesite",
+    images: imageSrc.movie,
+  },
+  {
+    id: 7,
+    category: "react",
+    title: "Kakao API를 이용한 Bookstore 사이트",
+    desc: [
+      "https://dapi.kakao.com/v3/search/book API 이용",
+      "useReducer를 통한 상태관리",
+      "Infinite Scroll 적용",
+      "Lodash Throttle 적용",
+    ],
+    language: "React, Axios, Sass, uuid",
+    link: "https://daeun-react.github.io/bookstore",
+    images: imageSrc.book,
   },
 ];
 

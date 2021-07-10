@@ -9,11 +9,17 @@ import project1_img3 from "./proejct1/spc3.png";
 import project1_img4 from "./proejct1/spc4.png";
 import project1_img5 from "./proejct1/spc5.png";
 
+import project2_img0 from "./project2/ssk0.png";
 import project2_img1 from "./project2/ssk1.png";
 import project2_img2 from "./project2/ssk2.png";
 import project2_img3 from "./project2/ssk3.png";
 import project2_img4 from "./project2/ssk4.png";
-import project2_img5 from "./project2/ssk5.png";
+
+import movie1 from "./react/movie/movie1.png";
+import movie2 from "./react/movie/movie2.png";
+import movie3 from "./react/movie/movie3.png";
+
+import book1 from "./react/bookstore/book1.png";
 
 export const imageSrc = {
   myinfo: [myinfo1, myinfo2, myinfo3],
@@ -26,10 +32,12 @@ export const imageSrc = {
     project1_img5,
   ],
   pj2: [
+    project2_img0,
     project2_img1,
     project2_img2,
     project2_img3,
     project2_img4,
-    project2_img5,
   ],
+  movie: [movie1, movie2, movie3],
+  book: [book1],
 };

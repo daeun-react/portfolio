@@ -4,21 +4,40 @@ import styled from "styled-components";
 import ImageSlider from "../../common/ImageSlider";
 
 function PortfolioItem({ listItem, showModal, show, type = "page" }) {
+  const renderDescInfo = (desc) => {
+    return (
+      <ul>
+        {desc.map((d, i) => (
+          <li key={i}>{d}</li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <FilterItem show={show} type={type}>
       <ImageWrapper>
-        <ImageSlider images={listItem.images} auto={false} />
         {type === "page" && (
-          <ModalWrapper onClick={() => showModal(listItem)}>
-            <BsArrowsFullscreen />
-          </ModalWrapper>
+          <>
+            <ModalWrapper onClick={() => showModal(listItem)}>
+              <BsArrowsFullscreen />
+            </ModalWrapper>
+            <img src={listItem.images[0]} alt="" />
+          </>
+        )}
+        {type === "modal" && (
+          <ImageSlider images={listItem.images} auto={false} />
         )}
       </ImageWrapper>
       <InfoWrapper
         onClick={() => type === "page" && window.open(listItem.link)}
       >
         <div className="main">{listItem.title}</div>
-        <div className="text">{listItem.desc}</div>
+        <div className="desc">
+          {listItem.category === "project"
+            ? listItem.desc
+            : renderDescInfo(listItem.desc)}
+        </div>
         <div className="lang">{listItem.language}</div>
         <div className="link">{listItem.link}</div>
         {listItem.category === "project" && (
@@ -65,12 +84,29 @@ const ImageWrapper = styled.div`
 const ModalWrapper = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 300ms ease;
+  cursor: pointer;
+  z-index: 999;
+
+  &:hover {
+    background-image: linear-gradient(to right, royalblue, aquamarine);
+    opacity: 0.9;
+  }
 
   svg {
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: #fff;
+
     &:hover {
-      color: #ff6384;
+      opacity: 1;
     }
   }
 
@@ -80,6 +116,10 @@ const ModalWrapper = styled.div`
 `;
 
 const InfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   font-size: 1rem;
   background-color: #fafafa;
   letter-spacing: 1.5px;
@@ -87,25 +127,40 @@ const InfoWrapper = styled.div`
   z-index: 0;
 
   & > * {
-    padding-top: 10px;
+    padding: 6px 0;
   }
 
   div.main {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: bold;
   }
 
-  div.text {
+  div.desc {
+    font-size: 1rem;
     color: #777;
   }
 
+  div.lang {
+    font-size: 0.9rem;
+  }
+
   div.link {
+    font-size: 0.9rem;
     color: royalblue;
   }
 
   div.warning {
     font-size: 0.75rem;
     color: #ff6384;
+  }
+
+  ul {
+    padding: 0 20px;
+    list-style: square;
+  }
+
+  li {
+    padding: 5px 0;
   }
 `;
 

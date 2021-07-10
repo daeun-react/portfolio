@@ -66,7 +66,7 @@ function Portfolio({}, ref) {
           </LI>
         ))}
       </UL>
-      <div>
+      <Container>
         {projectList.map((listItem, i) => (
           <PortfolioItem
             key={listItem.id}
@@ -75,7 +75,7 @@ function Portfolio({}, ref) {
             show={i === 2 * (buttonActive - 1) || i === 2 * buttonActive - 1}
           />
         ))}
-      </div>
+      </Container>
       <Pagenation>{renderButton}</Pagenation>
       <Blackout isVisible={isVisible} onSetIsVisible={setIsVisible} />
       {showItem && <Modal isVisible={isVisible} listItem={showItem} />}
@@ -104,14 +104,14 @@ const LI = styled.li`
   }
 `;
 
+const Container = styled.div``;
+
 const Pagenation = styled.div`
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 `;
 
 const Page = styled.button`
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
   font-size: 1rem;
   line-height: 1.5;
   background: royalblue;
@@ -119,6 +119,8 @@ const Page = styled.button`
   border: none;
   outline: none;
   margin-right: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
 
   ${({ active }) =>
     active &&

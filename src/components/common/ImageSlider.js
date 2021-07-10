@@ -34,7 +34,7 @@ function ImageSlider({ images, auto = false }) {
         next={index === next}
         auto={auto}
       >
-        <img src={img} alt="" />
+        <img src={img} alt={img} />
       </ImageSlide>
     );
   });
