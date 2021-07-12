@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
-import list from "./Protfolio/list";
+import list from "../../list";
 import { SectionWrapper, Title } from "../../styles/CommonStyle";
 import Blackout from "../common/Blackout";
 import Modal from "../common/Modal";
@@ -108,7 +108,7 @@ const Container = styled.div``;
 
 const Pagenation = styled.div`
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const Page = styled.button`
