@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bc70bb1d.chunk.css",
-    "main.js": "/portfolio/static/js/main.c7f628a2.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c7f628a2.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.4a1b0e80.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.4a1b0e80.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.065556dc.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.065556dc.js.map",
     "static/js/2.a04367f7.chunk.js": "/portfolio/static/js/2.a04367f7.chunk.js",
@@ -11,12 +11,32 @@
     "static/css/main.bc70bb1d.chunk.css.map": "/portfolio/static/css/main.bc70bb1d.chunk.css.map",
     "static/js/2.a04367f7.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a04367f7.chunk.js.LICENSE.txt",
     "static/media/book1.4359ca8b.png": "/portfolio/static/media/book1.4359ca8b.png",
+    "static/media/instagram0.e4cab6ee.png": "/portfolio/static/media/instagram0.e4cab6ee.png",
+    "static/media/instagram1.e5fa3545.png": "/portfolio/static/media/instagram1.e5fa3545.png",
+    "static/media/instagram2.d0269ae0.png": "/portfolio/static/media/instagram2.d0269ae0.png",
+    "static/media/instagram3.b2117787.png": "/portfolio/static/media/instagram3.b2117787.png",
+    "static/media/instagram4.045e2ce0.png": "/portfolio/static/media/instagram4.045e2ce0.png",
+    "static/media/instagram5.4be8f27a.png": "/portfolio/static/media/instagram5.4be8f27a.png",
+    "static/media/instagram6.d6f393be.png": "/portfolio/static/media/instagram6.d6f393be.png",
+    "static/media/instagram7.9b727056.png": "/portfolio/static/media/instagram7.9b727056.png",
+    "static/media/mail1.f79c35f4.png": "/portfolio/static/media/mail1.f79c35f4.png",
+    "static/media/mail2.e110e88f.png": "/portfolio/static/media/mail2.e110e88f.png",
     "static/media/movie1.13908b34.png": "/portfolio/static/media/movie1.13908b34.png",
     "static/media/movie2.467b1917.png": "/portfolio/static/media/movie2.467b1917.png",
     "static/media/movie3.c2c40a34.png": "/portfolio/static/media/movie3.c2c40a34.png",
     "static/media/myinfo1.275bd975.jpg": "/portfolio/static/media/myinfo1.275bd975.jpg",
     "static/media/myinfo2.7e2fc667.jpg": "/portfolio/static/media/myinfo2.7e2fc667.jpg",
     "static/media/myinfo3.08406dc2.jpg": "/portfolio/static/media/myinfo3.08406dc2.jpg",
+    "static/media/performance.eff94649.png": "/portfolio/static/media/performance.eff94649.png",
+    "static/media/portfolio1.75bb322c.png": "/portfolio/static/media/portfolio1.75bb322c.png",
+    "static/media/portfolio2.e2468c95.png": "/portfolio/static/media/portfolio2.e2468c95.png",
+    "static/media/portfolio3.957abb81.png": "/portfolio/static/media/portfolio3.957abb81.png",
+    "static/media/portfolio4.90591402.png": "/portfolio/static/media/portfolio4.90591402.png",
+    "static/media/shop1.78ea5b0e.png": "/portfolio/static/media/shop1.78ea5b0e.png",
+    "static/media/shop2.f26f4359.png": "/portfolio/static/media/shop2.f26f4359.png",
+    "static/media/shop3.1b87f522.png": "/portfolio/static/media/shop3.1b87f522.png",
+    "static/media/shop4.06543748.png": "/portfolio/static/media/shop4.06543748.png",
+    "static/media/shop5.33619ebc.png": "/portfolio/static/media/shop5.33619ebc.png",
     "static/media/spc0.1bd2359c.png": "/portfolio/static/media/spc0.1bd2359c.png",
     "static/media/spc1.7628fb0d.png": "/portfolio/static/media/spc1.7628fb0d.png",
     "static/media/spc2.2fd1775e.png": "/portfolio/static/media/spc2.2fd1775e.png",
@@ -27,12 +47,15 @@
     "static/media/ssk1.9467a4e0.png": "/portfolio/static/media/ssk1.9467a4e0.png",
     "static/media/ssk2.abb13d88.png": "/portfolio/static/media/ssk2.abb13d88.png",
     "static/media/ssk3.2e43c974.png": "/portfolio/static/media/ssk3.2e43c974.png",
-    "static/media/ssk4.a4811608.png": "/portfolio/static/media/ssk4.a4811608.png"
+    "static/media/ssk4.a4811608.png": "/portfolio/static/media/ssk4.a4811608.png",
+    "static/media/youtube1.32733c09.png": "/portfolio/static/media/youtube1.32733c09.png",
+    "static/media/youtube2.77080df8.png": "/portfolio/static/media/youtube2.77080df8.png",
+    "static/media/youtube3.67815da2.png": "/portfolio/static/media/youtube3.67815da2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.065556dc.js",
     "static/js/2.a04367f7.chunk.js",
     "static/css/main.bc70bb1d.chunk.css",
-    "static/js/main.c7f628a2.chunk.js"
+    "static/js/main.4a1b0e80.chunk.js"
   ]
 }
