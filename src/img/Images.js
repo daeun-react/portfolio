@@ -2,18 +2,18 @@ import myinfo1 from "./myinfo/myinfo1.jpg";
 import myinfo2 from "./myinfo/myinfo2.jpg";
 import myinfo3 from "./myinfo/myinfo3.jpg";
 
-import project1_img0 from "./proejct1/spc0.png";
-import project1_img1 from "./proejct1/spc1.png";
-import project1_img2 from "./proejct1/spc2.png";
-import project1_img3 from "./proejct1/spc3.png";
-import project1_img4 from "./proejct1/spc4.png";
-import project1_img5 from "./proejct1/spc5.png";
+import spc0 from "./project/spc/spc0.png";
+import spc1 from "./project/spc/spc1.png";
+import spc2 from "./project/spc/spc2.png";
+import spc3 from "./project/spc/spc3.png";
+import spc4 from "./project/spc/spc4.png";
+import spc5 from "./project/spc/spc5.png";
 
-import project2_img0 from "./project2/ssk0.png";
-import project2_img1 from "./project2/ssk1.png";
-import project2_img2 from "./project2/ssk2.png";
-import project2_img3 from "./project2/ssk3.png";
-import project2_img4 from "./project2/ssk4.png";
+import golf0 from "./project/golf/ssk0.png";
+import golf1 from "./project/golf/ssk1.png";
+import golf2 from "./project/golf/ssk2.png";
+import golf3 from "./project/golf/ssk3.png";
+import golf4 from "./project/golf/ssk4.png";
 
 import movie1 from "./react/movie/movie1.png";
 import movie2 from "./react/movie/movie2.png";
@@ -50,23 +50,16 @@ import portfolio2 from "./react/portfolio/portfolio2.png";
 import portfolio3 from "./react/portfolio/portfolio3.png";
 import portfolio4 from "./react/portfolio/portfolio4.png";
 
+import defaultImg from "./default.png";
+
 export const imageSrc = {
   myinfo: [myinfo1, myinfo2, myinfo3],
-  pj1: [
-    project1_img0,
-    project1_img1,
-    project1_img2,
-    project1_img3,
-    project1_img4,
-    project1_img5,
-  ],
-  pj2: [
-    project2_img0,
-    project2_img1,
-    project2_img2,
-    project2_img3,
-    project2_img4,
-  ],
+  pj1: [spc0, spc1, spc2, spc3, spc4, spc5],
+  pj2: [golf0, golf1, golf2, golf3, golf4],
+  pj3: [defaultImg],
+  pj4: [defaultImg],
+  pj5: [defaultImg],
+  pj6: [defaultImg],
   movie: [movie1, movie2, movie3],
   book: [book1],
   youtube: [youtube1, youtube2, youtube3],

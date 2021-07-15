@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import styled, { css } from "styled-components";
 import useInterval from "./useInterval";
 
@@ -40,6 +40,14 @@ function ImageSlider({ images, auto = false }) {
   });
 
   // useInterval(moveNext, 3000);
+
+  useEffect(() => {
+    images?.map((image) => {
+      const img = new Image();
+      img.src = image;
+      return null;
+    });
+  }, [images]);
 
   if (!images) return null;
 

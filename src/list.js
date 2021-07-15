@@ -26,7 +26,7 @@ const list = [
     desc: "순천향대학교 병원에 전화하여 스크립트 내용을 바탕으로 통화 후 해당 정보를 웹 사이트에 기록 및 녹취 파일 업로드를 관리하는 사이트",
     language: "C#, MSSQL, Javascript, CSS, HTML",
     link: "http://schms.hrcglobal.com",
-    images: imageSrc.pj1,
+    images: imageSrc.pj3,
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const list = [
     desc: "전국 삼성전자 판매점에 방문하여 제품별 구매 상담 후, 설문 내용 입력 및 경쟁사에 방문 후 제품 및 서비스 응대평가 비교 내용 입력 사이트",
     language: "C#, MSSQL, Javascript, CSS, HTML",
     link: "http://s.sales.hrcglobal.com",
-    images: imageSrc.pj1,
+    images: imageSrc.pj4,
   },
   {
     id: 5,
@@ -44,16 +44,16 @@ const list = [
     desc: "전문면접원이 매월 홈플러스 매장에 방문하여 할당된 조사 물품에 대한 가격 및 할인 정보에 대한 내용 입력하는 사이트",
     language: "C#, MSSQL, Javascript, CSS, HTML",
     link: "http://ltmm.hrcglobal.com",
-    images: imageSrc.pj1,
+    images: imageSrc.pj5,
   },
   {
     id: 6,
     category: "project",
     title: "CAWI 설문조사",
     desc: "",
-    language: "C#, MSSQL, Javascript, CSS, HTML",
-    link: "http://ltmm.hrcglobal.com",
-    images: imageSrc.pj1,
+    language: "",
+    link: "",
+    images: imageSrc.pj6,
   },
   {
     id: 7,
